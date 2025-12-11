@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Unity.Collections;
 using UnityEngine;
 
@@ -6,7 +8,7 @@ public class FabrikChain : MonoBehaviour
     [SerializeField, ReadOnly]
     private FabrikChain Parent;
     [SerializeField, ReadOnly]
-    private FabrikChain Child;
+    private List<FabrikChain> Children;
     [SerializeField, ReadOnly]
     private float LengthToChild;
     [SerializeField, ReadOnly]
@@ -14,6 +16,9 @@ public class FabrikChain : MonoBehaviour
 
     public void SetUp()
     {
+        Debug.LogError($"{this.name}");
+        Children.Clear();
+
         if (this.transform.parent != null && this.transform.parent.GetComponent<FabrikChain>() != null)
         {
             Parent = this.transform.parent.GetComponent<FabrikChain>();
@@ -22,8 +27,10 @@ public class FabrikChain : MonoBehaviour
         {
             if (child.GetComponent<FabrikChain>() != null)
             {
-                Child = child.GetComponent<FabrikChain>();
+                var childChain = child.GetComponent<FabrikChain>();
+                Children.Add(child.GetComponent<FabrikChain>());
                 LengthToChild = Vector3.Distance(this.transform.localPosition, child.transform.localPosition);
+                childChain.SetUp();
             }
         }
         OriginLocalPos = this.transform.localPosition;
@@ -31,9 +38,9 @@ public class FabrikChain : MonoBehaviour
 
     public Vector3 SolveIK(Vector3 targetPos)
     {
-        MoveBone(targetPos);
-
         var parentLocalPos = this.transform.localPosition;
+
+        MoveBone(targetPos);
 
         if (Parent != null)
         {
@@ -50,5 +57,19 @@ public class FabrikChain : MonoBehaviour
         var dir = (this.transform.localPosition - targetPos).normalized;
         var nextPos = dir * LengthToChild;
         this.transform.localPosition = nextPos;
+    }
+
+    public List<FabrikChain> FindTailChains()
+    {
+        var children = new List<FabrikChain>();
+        foreach (var child in Children)
+        {
+            children.AddRange(child.FindTailChains());
+        }
+        if (!children.Any())
+        {
+            children = Children;
+        }
+        return children;
     }
 }

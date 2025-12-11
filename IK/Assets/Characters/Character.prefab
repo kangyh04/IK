@@ -32,6 +32,128 @@ Transform:
   - {fileID: 985116672953314315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6973737970294674935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5946435608586272460}
+  - component: {fileID: 3433854613654912122}
+  - component: {fileID: 4766969905758094240}
+  m_Layer: 0
+  m_Name: LeftToe_Solver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5946435608586272460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973737970294674935}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3618916766317608600}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3433854613654912122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973737970294674935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
+  Parent: {fileID: 3540295850689355710}
+  Children: []
+  LengthToChild: 0
+  OriginLocalPos: {x: 0, y: 0, z: 0}
+--- !u!114 &4766969905758094240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973737970294674935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cadb1349d72494694030649ccf2605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FabrikSolver
+--- !u!1 &8237628690539221997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3325569526128176938}
+  - component: {fileID: 4026386147478677350}
+  - component: {fileID: 863958957993487839}
+  m_Layer: 0
+  m_Name: RightToe_Solver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3325569526128176938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237628690539221997}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7315260928878738922}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4026386147478677350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237628690539221997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
+  Parent: {fileID: 7202641084327752061}
+  Children: []
+  LengthToChild: 0
+  OriginLocalPos: {x: 0, y: 0, z: 0}
+--- !u!114 &863958957993487839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237628690539221997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cadb1349d72494694030649ccf2605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FabrikSolver
 --- !u!1001 &729986765478104032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,7 +208,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4042427859692680568, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5946435608586272460}
+    - targetCorrespondingSourceObject: {fileID: 8044669281949152778, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3325569526128176938}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1082271958561512970, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
       insertIndex: -1
@@ -109,6 +237,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -1703473491307067327, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3540295850689355710}
+    - targetCorrespondingSourceObject: {fileID: -3086436065929644917, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1769155324809398524}
+    - targetCorrespondingSourceObject: {fileID: -4332706925441422008, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 389509046633198636}
+    - targetCorrespondingSourceObject: {fileID: -751476226918971245, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8920502825414876963}
+    - targetCorrespondingSourceObject: {fileID: -5561550452697079657, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3884260252810167962}
+    - targetCorrespondingSourceObject: {fileID: -1200856079203341021, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7202641084327752061}
   m_SourcePrefab: {fileID: 100100000, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
 --- !u!1 &370543685557016042 stripped
 GameObject:
@@ -128,8 +271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
   Parent: {fileID: 0}
-  Child: {fileID: 4242593049045331484}
-  LengthToChild: 1.0443811
+  Children:
+  - {fileID: 4242593049045331484}
+  - {fileID: 1769155324809398524}
+  LengthToChild: 1.0446572
   OriginLocalPos: {x: -0.0021776527, y: 0.9542483, z: -0.004040982}
 --- !u!114 &255225476537141372
 MonoBehaviour:
@@ -144,6 +289,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fabrik
   RootChain: {fileID: 3773538180705031949}
+  Solvers:
+  - {fileID: 4766969905758094240}
+  - {fileID: 863958957993487839}
 --- !u!4 &985116672953314315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -166,10 +314,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
-  Parent: {fileID: 0}
-  Child: {fileID: 0}
-  LengthToChild: 0
-  OriginLocalPos: {x: 0, y: 0, z: 0}
+  Parent: {fileID: 103160684077749550}
+  Children:
+  - {fileID: 3540295850689355710}
+  LengthToChild: 0.09703577
+  OriginLocalPos: {x: -2.7044297e-10, y: 0.16368599, z: -0.0000000066870074}
 --- !u!1 &2340998934996421088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6170625038081293824, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -187,10 +336,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
-  Parent: {fileID: 0}
-  Child: {fileID: 0}
-  LengthToChild: 0
-  OriginLocalPos: {x: 0, y: 0, z: 0}
+  Parent: {fileID: 4242593049045331484}
+  Children:
+  - {fileID: 103160684077749550}
+  LengthToChild: 0.10085121
+  OriginLocalPos: {x: 0.0037225636, y: 0.361852, z: 0.0008833976}
 --- !u!1 &2424177841049371085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3135921509060577837, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -209,9 +359,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
   Parent: {fileID: 3773538180705031949}
-  Child: {fileID: 0}
-  LengthToChild: 0
+  Children:
+  - {fileID: 1582560177207820101}
+  LengthToChild: 0.45545197
   OriginLocalPos: {x: -0.06620178, y: -0.08816846, z: -0.0044718278}
+--- !u!4 &3618916766317608600 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4042427859692680568, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+  m_PrefabInstance: {fileID: 729986765478104032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4102788383407663991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5561550452697079657, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+  m_PrefabInstance: {fileID: 729986765478104032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3884260252810167962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102788383407663991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
+  Parent: {fileID: 8920502825414876963}
+  Children:
+  - {fileID: 7202641084327752061}
+  LengthToChild: 0.101858474
+  OriginLocalPos: {x: -3.030145e-12, y: 0.1686341, z: -0.0000000029002587}
+--- !u!1 &5331783781814593192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4332706925441422008, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+  m_PrefabInstance: {fileID: 729986765478104032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &389509046633198636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331783781814593192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
+  Parent: {fileID: 1769155324809398524}
+  Children:
+  - {fileID: 8920502825414876963}
+  LengthToChild: 0.100885324
+  OriginLocalPos: {x: -0.0037211438, y: 0.36183897, z: 0.0049615745}
+--- !u!1 &6848754405055938411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3086436065929644917, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+  m_PrefabInstance: {fileID: 729986765478104032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1769155324809398524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848754405055938411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
+  Parent: {fileID: 3773538180705031949}
+  Children:
+  - {fileID: 389509046633198636}
+  LengthToChild: 0.4555051
+  OriginLocalPos: {x: 0.06620178, y: -0.08816849, z: -0.0044718278}
 --- !u!1 &7096939616557990817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1703473491307067327, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -229,10 +451,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
-  Parent: {fileID: 0}
-  Child: {fileID: 0}
-  LengthToChild: 0
-  OriginLocalPos: {x: 0, y: 0, z: 0}
+  Parent: {fileID: 6880900667217186446}
+  Children:
+  - {fileID: 3433854613654912122}
+  LengthToChild: 0.06665022
+  OriginLocalPos: {x: -1.8163835e-11, y: 0.06665022, z: 4.8907482e-11}
+--- !u!1 &7310710925394732739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1200856079203341021, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+  m_PrefabInstance: {fileID: 729986765478104032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7202641084327752061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310710925394732739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
+  Parent: {fileID: 3884260252810167962}
+  Children:
+  - {fileID: 4026386147478677350}
+  LengthToChild: 0.06677563
+  OriginLocalPos: {x: -3.188056e-11, y: 0.06677563, z: 5.6875376e-11}
+--- !u!4 &7315260928878738922 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8044669281949152778, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+  m_PrefabInstance: {fileID: 729986765478104032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7579608522352168788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2084811680363313996, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -250,7 +500,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
-  Parent: {fileID: 0}
-  Child: {fileID: 0}
-  LengthToChild: 0
-  OriginLocalPos: {x: 0, y: 0, z: 0}
+  Parent: {fileID: 1582560177207820101}
+  Children:
+  - {fileID: 6880900667217186446}
+  LengthToChild: 0.2989446
+  OriginLocalPos: {x: -5.085549e-10, y: 0.4626306, z: -7.346706e-10}
+--- !u!1 &9201794404935205747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -751476226918971245, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
+  m_PrefabInstance: {fileID: 729986765478104032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8920502825414876963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201794404935205747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
+  Parent: {fileID: 389509046633198636}
+  Children:
+  - {fileID: 3884260252810167962}
+  LengthToChild: 0.29389936
+  OriginLocalPos: {x: 6.815706e-10, y: 0.46253347, z: -3.5159417e-10}
