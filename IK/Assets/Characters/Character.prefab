@@ -41,7 +41,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5946435608586272460}
-  - component: {fileID: 3433854613654912122}
   - component: {fileID: 4766969905758094240}
   m_Layer: 0
   m_Name: LeftToe_Solver
@@ -65,22 +64,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3618916766317608600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3433854613654912122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6973737970294674935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
-  Parent: {fileID: 3540295850689355710}
-  Children: []
-  LengthToChild: 0
-  OriginLocalPos: {x: 0, y: 0, z: 0}
 --- !u!114 &4766969905758094240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +85,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3325569526128176938}
-  - component: {fileID: 4026386147478677350}
   - component: {fileID: 863958957993487839}
   m_Layer: 0
   m_Name: RightToe_Solver
@@ -126,22 +108,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7315260928878738922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4026386147478677350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8237628690539221997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
-  Parent: {fileID: 7202641084327752061}
-  Children: []
-  LengthToChild: 0
-  OriginLocalPos: {x: 0, y: 0, z: 0}
 --- !u!114 &863958957993487839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +242,7 @@ MonoBehaviour:
   - {fileID: 1769155324809398524}
   LengthToChild: 1.0446572
   OriginLocalPos: {x: -0.0021776527, y: 0.9542483, z: -0.004040982}
+  Solver: {fileID: 0}
 --- !u!114 &255225476537141372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +259,9 @@ MonoBehaviour:
   Solvers:
   - {fileID: 4766969905758094240}
   - {fileID: 863958957993487839}
+  TailChains:
+  - {fileID: 3540295850689355710}
+  - {fileID: 7202641084327752061}
 --- !u!4 &985116672953314315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -319,6 +289,7 @@ MonoBehaviour:
   - {fileID: 3540295850689355710}
   LengthToChild: 0.09703577
   OriginLocalPos: {x: -2.7044297e-10, y: 0.16368599, z: -0.0000000066870074}
+  Solver: {fileID: 0}
 --- !u!1 &2340998934996421088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6170625038081293824, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -341,6 +312,7 @@ MonoBehaviour:
   - {fileID: 103160684077749550}
   LengthToChild: 0.10085121
   OriginLocalPos: {x: 0.0037225636, y: 0.361852, z: 0.0008833976}
+  Solver: {fileID: 0}
 --- !u!1 &2424177841049371085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3135921509060577837, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -363,6 +335,7 @@ MonoBehaviour:
   - {fileID: 1582560177207820101}
   LengthToChild: 0.45545197
   OriginLocalPos: {x: -0.06620178, y: -0.08816846, z: -0.0044718278}
+  Solver: {fileID: 0}
 --- !u!4 &3618916766317608600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4042427859692680568, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -390,6 +363,7 @@ MonoBehaviour:
   - {fileID: 7202641084327752061}
   LengthToChild: 0.101858474
   OriginLocalPos: {x: -3.030145e-12, y: 0.1686341, z: -0.0000000029002587}
+  Solver: {fileID: 0}
 --- !u!1 &5331783781814593192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4332706925441422008, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -412,6 +386,7 @@ MonoBehaviour:
   - {fileID: 8920502825414876963}
   LengthToChild: 0.100885324
   OriginLocalPos: {x: -0.0037211438, y: 0.36183897, z: 0.0049615745}
+  Solver: {fileID: 0}
 --- !u!1 &6848754405055938411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3086436065929644917, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -434,6 +409,7 @@ MonoBehaviour:
   - {fileID: 389509046633198636}
   LengthToChild: 0.4555051
   OriginLocalPos: {x: 0.06620178, y: -0.08816849, z: -0.0044718278}
+  Solver: {fileID: 0}
 --- !u!1 &7096939616557990817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1703473491307067327, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -452,10 +428,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
   Parent: {fileID: 6880900667217186446}
-  Children:
-  - {fileID: 3433854613654912122}
+  Children: []
   LengthToChild: 0.06665022
   OriginLocalPos: {x: -1.8163835e-11, y: 0.06665022, z: 4.8907482e-11}
+  Solver: {fileID: 4766969905758094240}
 --- !u!1 &7310710925394732739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1200856079203341021, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -474,10 +450,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
   Parent: {fileID: 3884260252810167962}
-  Children:
-  - {fileID: 4026386147478677350}
+  Children: []
   LengthToChild: 0.06677563
   OriginLocalPos: {x: -3.188056e-11, y: 0.06677563, z: 5.6875376e-11}
+  Solver: {fileID: 863958957993487839}
 --- !u!4 &7315260928878738922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8044669281949152778, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -505,6 +481,7 @@ MonoBehaviour:
   - {fileID: 6880900667217186446}
   LengthToChild: 0.2989446
   OriginLocalPos: {x: -5.085549e-10, y: 0.4626306, z: -7.346706e-10}
+  Solver: {fileID: 0}
 --- !u!1 &9201794404935205747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -751476226918971245, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -527,3 +504,4 @@ MonoBehaviour:
   - {fileID: 3884260252810167962}
   LengthToChild: 0.29389936
   OriginLocalPos: {x: 6.815706e-10, y: 0.46253347, z: -3.5159417e-10}
+  Solver: {fileID: 0}

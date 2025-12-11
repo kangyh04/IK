@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Collections;
 using UnityEngine;
 
@@ -9,10 +10,16 @@ public class Fabrik : MonoBehaviour
     private FabrikChain RootChain;
     [SerializeField, ReadOnly]
     private List<FabrikSolver> Solvers;
+    [SerializeField, ReadOnly]
+    private List<FabrikChain> TailChains;
 
     private void LateUpdate()
     {
+        foreach (var solver in Solvers)
+        {
+            var child = solver.GetComponent<FabrikChain>();
 
+        }
     }
 
     private void Reset()
@@ -21,6 +28,8 @@ public class Fabrik : MonoBehaviour
         RootChain.SetUp();
 
         FindTailChains();
+
+        FindSolvers();
     }
 
     private void FindTailChains()
@@ -31,14 +40,16 @@ public class Fabrik : MonoBehaviour
             {
                 var chain = t.GetComponent<FabrikChain>();
                 var tailChains = chain.FindTailChains();
-                foreach (var tailChain in tailChains)
-                {
-                    if (tailChain.GetComponent<FabrikSolver>() != null)
-                    {
-                        Solvers.Add(tailChain.GetComponent<FabrikSolver>());
-                    }
-                }
+                TailChains.AddRange(tailChains);
             }
         }
+    }
+
+    private void FindSolvers()
+    {
+        Solvers = TailChains
+            .Where(tail => tail.FabrikSolver != null)
+            .Select(tail => tail.FabrikSolver)
+            .ToList();
     }
 }

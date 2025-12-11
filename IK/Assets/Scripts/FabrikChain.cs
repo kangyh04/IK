@@ -13,10 +13,13 @@ public class FabrikChain : MonoBehaviour
     private float LengthToChild;
     [SerializeField, ReadOnly]
     private Vector3 OriginLocalPos;
+    [SerializeField, ReadOnly]
+    private FabrikSolver Solver;
+
+    public FabrikSolver FabrikSolver { get => Solver; }
 
     public void SetUp()
     {
-        Debug.LogError($"{this.name}");
         Children.Clear();
 
         if (this.transform.parent != null && this.transform.parent.GetComponent<FabrikChain>() != null)
@@ -31,6 +34,11 @@ public class FabrikChain : MonoBehaviour
                 Children.Add(child.GetComponent<FabrikChain>());
                 LengthToChild = Vector3.Distance(this.transform.localPosition, child.transform.localPosition);
                 childChain.SetUp();
+            }
+
+            if (child.GetComponent<FabrikSolver>() != null)
+            {
+                Solver = child.GetComponent<FabrikSolver>();
             }
         }
         OriginLocalPos = this.transform.localPosition;
