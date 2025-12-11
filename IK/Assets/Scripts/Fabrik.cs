@@ -18,7 +18,25 @@ public class Fabrik : MonoBehaviour
         foreach (var solver in Solvers)
         {
             var child = solver.GetComponent<FabrikChain>();
+        }
 
+        foreach (var tailchain in TailChains)
+        {
+            if (tailchain.FabrikSolver != null)
+            {
+                var solver = tailchain.FabrikSolver;
+                var targetPos = solver.transform.position;
+                var dir = solver.transform.position - this.transform.position;
+                var distanceToSolver = dir.magnitude;
+                // NOTE : if distance of root to solver were farer than distance of root to tail
+                // modify the target position to the same angle and max distance
+                if (distanceToSolver > tailchain.DistanceFromToRoot)
+                {
+                    targetPos = dir.normalized * tailchain.DistanceFromToRoot;
+                }
+
+                tailchain.SolveIK(targetPos);
+            }
         }
     }
 

@@ -15,8 +15,11 @@ public class FabrikChain : MonoBehaviour
     private Vector3 OriginLocalPos;
     [SerializeField, ReadOnly]
     private FabrikSolver Solver;
+    [SerializeField, ReadOnly]
+    private float DistanceFromRoot;
 
     public FabrikSolver FabrikSolver { get => Solver; }
+    public float DistanceFromToRoot { get => DistanceFromRoot; }
 
     public void SetUp()
     {
