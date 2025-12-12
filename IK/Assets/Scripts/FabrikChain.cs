@@ -45,28 +45,30 @@ public class FabrikChain : MonoBehaviour
             }
         }
         OriginLocalPos = this.transform.localPosition;
+
+        DistanceFromRoot = Parent.DistanceFromRoot + (this.transform.localPosition - Parent.transform.localPosition).sqrMagnitude;
     }
 
     public Vector3 SolveIK(Vector3 targetPos)
     {
         var parentLocalPos = this.transform.localPosition;
 
-        MoveBone(targetPos);
+        MoveBone(targetPos, LengthToChild);
 
         if (Parent != null)
         {
             parentLocalPos = Parent.SolveIK(this.transform.localPosition);
         }
 
-        MoveBone(parentLocalPos);
+        MoveBone(parentLocalPos, Parent.LengthToChild);
 
         return this.transform.localPosition;
     }
 
-    private void MoveBone(Vector3 targetPos)
+    private void MoveBone(Vector3 targetPos, float length)
     {
         var dir = (this.transform.localPosition - targetPos).normalized;
-        var nextPos = dir * LengthToChild;
+        var nextPos = dir * length;
         this.transform.localPosition = nextPos;
     }
 
