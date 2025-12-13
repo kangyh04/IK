@@ -30,6 +30,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 985116672953314315}
+  - {fileID: 5946435608586272460}
+  - {fileID: 3325569526128176938}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6973737970294674935
@@ -57,12 +59,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6973737970294674935}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.06721974, y: 0.7451574, z: 0.66048086, w: 0.06314351}
+  m_LocalPosition: {x: 0.67521596, y: 0.018973947, z: 0.5731087}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3618916766317608600}
+  m_Father: {fileID: 6401300909707960928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4766969905758094240
 MonoBehaviour:
@@ -101,12 +103,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8237628690539221997}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.088409185, y: 0.80546385, z: 0.5752745, w: -0.111673824}
+  m_LocalPosition: {x: 0.8175273, y: 0.09858906, z: 1.244052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7315260928878738922}
+  m_Father: {fileID: 6401300909707960928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &863958957993487839
 MonoBehaviour:
@@ -174,13 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4042427859692680568, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5946435608586272460}
-    - targetCorrespondingSourceObject: {fileID: 8044669281949152778, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3325569526128176938}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1082271958561512970, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
       insertIndex: -1
@@ -243,6 +239,7 @@ MonoBehaviour:
   LengthToChild: 1.0446572
   OriginLocalPos: {x: -0.0021776527, y: 0.9542483, z: -0.004040982}
   Solver: {fileID: 0}
+  DistanceFromRoot: 0
 --- !u!114 &255225476537141372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +287,7 @@ MonoBehaviour:
   LengthToChild: 0.09703577
   OriginLocalPos: {x: -2.7044297e-10, y: 0.16368599, z: -0.0000000066870074}
   Solver: {fileID: 0}
+  DistanceFromRoot: 1.3977073
 --- !u!1 &2340998934996421088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6170625038081293824, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -313,6 +311,7 @@ MonoBehaviour:
   LengthToChild: 0.10085121
   OriginLocalPos: {x: 0.0037225636, y: 0.361852, z: 0.0008833976}
   Solver: {fileID: 0}
+  DistanceFromRoot: 1.2981685
 --- !u!1 &2424177841049371085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3135921509060577837, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -336,11 +335,7 @@ MonoBehaviour:
   LengthToChild: 0.45545197
   OriginLocalPos: {x: -0.06620178, y: -0.08816846, z: -0.0044718278}
   Solver: {fileID: 0}
---- !u!4 &3618916766317608600 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4042427859692680568, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
-  m_PrefabInstance: {fileID: 729986765478104032}
-  m_PrefabAsset: {fileID: 0}
+  DistanceFromRoot: 1.0907321
 --- !u!1 &4102788383407663991 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5561550452697079657, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -364,6 +359,7 @@ MonoBehaviour:
   LengthToChild: 0.101858474
   OriginLocalPos: {x: -3.030145e-12, y: 0.1686341, z: -0.0000000029002587}
   Solver: {fileID: 0}
+  DistanceFromRoot: 1.3953482
 --- !u!1 &5331783781814593192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4332706925441422008, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -387,6 +383,7 @@ MonoBehaviour:
   LengthToChild: 0.100885324
   OriginLocalPos: {x: -0.0037211438, y: 0.36183897, z: 0.0049615745}
   Solver: {fileID: 0}
+  DistanceFromRoot: 1.2987936
 --- !u!1 &6848754405055938411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3086436065929644917, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -410,6 +407,7 @@ MonoBehaviour:
   LengthToChild: 0.4555051
   OriginLocalPos: {x: 0.06620178, y: -0.08816849, z: -0.0044718278}
   Solver: {fileID: 0}
+  DistanceFromRoot: 1.0913087
 --- !u!1 &7096939616557990817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1703473491307067327, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -432,6 +430,7 @@ MonoBehaviour:
   LengthToChild: 0.06665022
   OriginLocalPos: {x: -1.8163835e-11, y: 0.06665022, z: 4.8907482e-11}
   Solver: {fileID: 4766969905758094240}
+  DistanceFromRoot: 1.4071233
 --- !u!1 &7310710925394732739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1200856079203341021, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -454,11 +453,7 @@ MonoBehaviour:
   LengthToChild: 0.06677563
   OriginLocalPos: {x: -3.188056e-11, y: 0.06677563, z: 5.6875376e-11}
   Solver: {fileID: 863958957993487839}
---- !u!4 &7315260928878738922 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8044669281949152778, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
-  m_PrefabInstance: {fileID: 729986765478104032}
-  m_PrefabAsset: {fileID: 0}
+  DistanceFromRoot: 1.4057233
 --- !u!1 &7579608522352168788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2084811680363313996, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -482,6 +477,7 @@ MonoBehaviour:
   LengthToChild: 0.2989446
   OriginLocalPos: {x: -5.085549e-10, y: 0.4626306, z: -7.346706e-10}
   Solver: {fileID: 0}
+  DistanceFromRoot: 1.3083395
 --- !u!1 &9201794404935205747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -751476226918971245, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -505,3 +501,4 @@ MonoBehaviour:
   LengthToChild: 0.29389936
   OriginLocalPos: {x: 6.815706e-10, y: 0.46253347, z: -3.5159417e-10}
   Solver: {fileID: 0}
+  DistanceFromRoot: 1.3089714

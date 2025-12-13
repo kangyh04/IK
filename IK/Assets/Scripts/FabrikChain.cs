@@ -23,11 +23,12 @@ public class FabrikChain : MonoBehaviour
 
     public void SetUp()
     {
-        Children.Clear();
+        Children = new List<FabrikChain>();
 
         if (this.transform.parent != null && this.transform.parent.GetComponent<FabrikChain>() != null)
         {
             Parent = this.transform.parent.GetComponent<FabrikChain>();
+            DistanceFromRoot = Parent.DistanceFromRoot + Vector3.Distance(this.transform.position, Parent.transform.position);
         }
         foreach (Transform child in this.transform)
         {
@@ -35,7 +36,7 @@ public class FabrikChain : MonoBehaviour
             {
                 var childChain = child.GetComponent<FabrikChain>();
                 Children.Add(child.GetComponent<FabrikChain>());
-                LengthToChild = Vector3.Distance(this.transform.localPosition, child.transform.localPosition);
+                LengthToChild = Vector3.Distance(this.transform.position, child.transform.position);
                 childChain.SetUp();
             }
 
@@ -45,22 +46,22 @@ public class FabrikChain : MonoBehaviour
             }
         }
         OriginLocalPos = this.transform.localPosition;
-
-        DistanceFromRoot = Parent.DistanceFromRoot + (this.transform.localPosition - Parent.transform.localPosition).sqrMagnitude;
     }
 
     public Vector3 SolveIK(Vector3 targetPos)
     {
         var parentLocalPos = this.transform.localPosition;
+        var distanceFromParent = 0.0f;
 
         MoveBone(targetPos, LengthToChild);
 
         if (Parent != null)
         {
             parentLocalPos = Parent.SolveIK(this.transform.localPosition);
+            distanceFromParent = Parent.LengthToChild;
         }
 
-        MoveBone(parentLocalPos, Parent.LengthToChild);
+        MoveBone(parentLocalPos, distanceFromParent);
 
         return this.transform.localPosition;
     }
@@ -69,7 +70,7 @@ public class FabrikChain : MonoBehaviour
     {
         var dir = (this.transform.localPosition - targetPos).normalized;
         var nextPos = dir * length;
-        this.transform.localPosition = nextPos;
+        this.transform.localPosition = nextPos + targetPos;
     }
 
     public List<FabrikChain> FindTailChains()
@@ -81,7 +82,7 @@ public class FabrikChain : MonoBehaviour
         }
         if (!children.Any())
         {
-            children = Children;
+            children.Add(this);
         }
         return children;
     }
