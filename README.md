@@ -10,6 +10,7 @@ Unity 기반의 FABRIK(Forward And Backward Reaching Inverse Kinematics) 알고�
 - **실시간 계산**: LateUpdate에서 자동으로 IK 계산
 
 ## 프로젝트 구조
+```
 IK/
 ├── Assets/
 │   ├── 3DModels/          # 3D 모델 리소스
@@ -24,3 +25,4 @@ IK/
 │   │   ├── TestCode.cs        # 테스트 코드
 │   │   └── Extensions/        # 확장 메서드
 │   |
+```
