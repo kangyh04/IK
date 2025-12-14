@@ -32,7 +32,7 @@ public class Fabrik : MonoBehaviour
                 // modify the target position to the same angle and max distance
                 if (distanceToSolver > tailchain.DistanceFromToRoot)
                 {
-                    targetPos = dir.normalized * tailchain.DistanceFromToRoot;
+                    targetPos = dir.normalized * tailchain.DistanceFromToRoot + this.transform.position;
                 }
 
                 tailchain.SolveIK(targetPos);

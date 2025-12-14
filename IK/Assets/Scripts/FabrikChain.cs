@@ -50,27 +50,27 @@ public class FabrikChain : MonoBehaviour
 
     public Vector3 SolveIK(Vector3 targetPos)
     {
-        var parentLocalPos = this.transform.localPosition;
+        var parentPos = this.transform.position;
         var distanceFromParent = 0.0f;
 
         MoveBone(targetPos, LengthToChild);
 
         if (Parent != null)
         {
-            parentLocalPos = Parent.SolveIK(this.transform.localPosition);
+            parentPos = Parent.SolveIK(this.transform.position);
             distanceFromParent = Parent.LengthToChild;
         }
 
-        MoveBone(parentLocalPos, distanceFromParent);
+        MoveBone(parentPos, distanceFromParent);
 
-        return this.transform.localPosition;
+        return this.transform.position;
     }
 
     private void MoveBone(Vector3 targetPos, float length)
     {
-        var dir = (this.transform.localPosition - targetPos).normalized;
+        var dir = (this.transform.position - targetPos).normalized;
         var nextPos = dir * length;
-        this.transform.localPosition = nextPos + targetPos;
+        this.transform.position = nextPos + targetPos;
     }
 
     public List<FabrikChain> FindTailChains()
