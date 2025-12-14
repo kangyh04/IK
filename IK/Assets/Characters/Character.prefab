@@ -196,9 +196,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1339101018200438765, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6880900667217186446}
-    - targetCorrespondingSourceObject: {fileID: -1703473491307067327, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3540295850689355710}
     - targetCorrespondingSourceObject: {fileID: -3086436065929644917, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1769155324809398524}
@@ -211,9 +208,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5561550452697079657, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3884260252810167962}
-    - targetCorrespondingSourceObject: {fileID: -1200856079203341021, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7202641084327752061}
   m_SourcePrefab: {fileID: 100100000, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
 --- !u!1 &370543685557016042 stripped
 GameObject:
@@ -236,8 +230,7 @@ MonoBehaviour:
   Children:
   - {fileID: 4242593049045331484}
   - {fileID: 1769155324809398524}
-  LengthToChild: 1.0446572
-  OriginLocalPos: {x: -0.0021776527, y: 0.9542483, z: -0.004040982}
+  LengthToChild: 0.1103465
   Solver: {fileID: 0}
   DistanceFromRoot: 0
 --- !u!114 &255225476537141372
@@ -253,12 +246,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fabrik
   RootChain: {fileID: 3773538180705031949}
-  Solvers:
-  - {fileID: 4766969905758094240}
-  - {fileID: 863958957993487839}
+  Solvers: []
   TailChains:
-  - {fileID: 3540295850689355710}
-  - {fileID: 7202641084327752061}
+  - {fileID: 6880900667217186446}
+  - {fileID: 3884260252810167962}
 --- !u!4 &985116672953314315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -282,12 +273,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
   Parent: {fileID: 103160684077749550}
-  Children:
-  - {fileID: 3540295850689355710}
-  LengthToChild: 0.09703577
-  OriginLocalPos: {x: -2.7044297e-10, y: 0.16368599, z: -0.0000000066870074}
-  Solver: {fileID: 0}
-  DistanceFromRoot: 1.3977073
+  Children: []
+  LengthToChild: 0
+  Solver: {fileID: 4766969905758094240}
+  DistanceFromRoot: 1.0985353
 --- !u!1 &2340998934996421088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6170625038081293824, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -308,10 +297,9 @@ MonoBehaviour:
   Parent: {fileID: 4242593049045331484}
   Children:
   - {fileID: 103160684077749550}
-  LengthToChild: 0.10085121
-  OriginLocalPos: {x: 0.0037225636, y: 0.361852, z: 0.0008833976}
+  LengthToChild: 0.46263054
   Solver: {fileID: 0}
-  DistanceFromRoot: 1.2981685
+  DistanceFromRoot: 0.47221875
 --- !u!1 &2424177841049371085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3135921509060577837, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -332,10 +320,9 @@ MonoBehaviour:
   Parent: {fileID: 3773538180705031949}
   Children:
   - {fileID: 1582560177207820101}
-  LengthToChild: 0.45545197
-  OriginLocalPos: {x: -0.06620178, y: -0.08816846, z: -0.0044718278}
+  LengthToChild: 0.36187226
   Solver: {fileID: 0}
-  DistanceFromRoot: 1.0907321
+  DistanceFromRoot: 0.1103465
 --- !u!1 &4102788383407663991 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5561550452697079657, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -354,12 +341,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
   Parent: {fileID: 8920502825414876963}
-  Children:
-  - {fileID: 7202641084327752061}
-  LengthToChild: 0.101858474
-  OriginLocalPos: {x: -3.030145e-12, y: 0.1686341, z: -0.0000000029002587}
-  Solver: {fileID: 0}
-  DistanceFromRoot: 1.3953482
+  Children: []
+  LengthToChild: 0
+  Solver: {fileID: 863958957993487839}
+  DistanceFromRoot: 1.1034065
 --- !u!1 &5331783781814593192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4332706925441422008, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -380,10 +365,9 @@ MonoBehaviour:
   Parent: {fileID: 1769155324809398524}
   Children:
   - {fileID: 8920502825414876963}
-  LengthToChild: 0.100885324
-  OriginLocalPos: {x: -0.0037211438, y: 0.36183897, z: 0.0049615745}
+  LengthToChild: 0.46253356
   Solver: {fileID: 0}
-  DistanceFromRoot: 1.2987936
+  DistanceFromRoot: 0.47223863
 --- !u!1 &6848754405055938411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3086436065929644917, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -404,56 +388,9 @@ MonoBehaviour:
   Parent: {fileID: 3773538180705031949}
   Children:
   - {fileID: 389509046633198636}
-  LengthToChild: 0.4555051
-  OriginLocalPos: {x: 0.06620178, y: -0.08816849, z: -0.0044718278}
+  LengthToChild: 0.36189213
   Solver: {fileID: 0}
-  DistanceFromRoot: 1.0913087
---- !u!1 &7096939616557990817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -1703473491307067327, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
-  m_PrefabInstance: {fileID: 729986765478104032}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3540295850689355710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7096939616557990817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
-  Parent: {fileID: 6880900667217186446}
-  Children: []
-  LengthToChild: 0.06665022
-  OriginLocalPos: {x: -1.8163835e-11, y: 0.06665022, z: 4.8907482e-11}
-  Solver: {fileID: 4766969905758094240}
-  DistanceFromRoot: 1.4071233
---- !u!1 &7310710925394732739 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -1200856079203341021, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
-  m_PrefabInstance: {fileID: 729986765478104032}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7202641084327752061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7310710925394732739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd7bfa45e752e2489299bf921227855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FabrikChain
-  Parent: {fileID: 3884260252810167962}
-  Children: []
-  LengthToChild: 0.06677563
-  OriginLocalPos: {x: -3.188056e-11, y: 0.06677563, z: 5.6875376e-11}
-  Solver: {fileID: 863958957993487839}
-  DistanceFromRoot: 1.4057233
+  DistanceFromRoot: 0.1103465
 --- !u!1 &7579608522352168788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2084811680363313996, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -474,10 +411,9 @@ MonoBehaviour:
   Parent: {fileID: 1582560177207820101}
   Children:
   - {fileID: 6880900667217186446}
-  LengthToChild: 0.2989446
-  OriginLocalPos: {x: -5.085549e-10, y: 0.4626306, z: -7.346706e-10}
+  LengthToChild: 0.16368604
   Solver: {fileID: 0}
-  DistanceFromRoot: 1.3083395
+  DistanceFromRoot: 0.93484926
 --- !u!1 &9201794404935205747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -751476226918971245, guid: 04dc5b366756cc14f951512f23a501fc, type: 3}
@@ -498,7 +434,6 @@ MonoBehaviour:
   Parent: {fileID: 389509046633198636}
   Children:
   - {fileID: 3884260252810167962}
-  LengthToChild: 0.29389936
-  OriginLocalPos: {x: 6.815706e-10, y: 0.46253347, z: -3.5159417e-10}
+  LengthToChild: 0.16863431
   Solver: {fileID: 0}
-  DistanceFromRoot: 1.3089714
+  DistanceFromRoot: 0.9347722

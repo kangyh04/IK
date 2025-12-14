@@ -12,8 +12,6 @@ public class FabrikChain : MonoBehaviour
     [SerializeField, ReadOnly]
     private float LengthToChild;
     [SerializeField, ReadOnly]
-    private Vector3 OriginLocalPos;
-    [SerializeField, ReadOnly]
     private FabrikSolver Solver;
     [SerializeField, ReadOnly]
     private float DistanceFromRoot;
@@ -21,9 +19,18 @@ public class FabrikChain : MonoBehaviour
     public FabrikSolver FabrikSolver { get => Solver; }
     public float DistanceFromToRoot { get => DistanceFromRoot; }
 
+    private void Clear()
+    {
+        Parent = null;
+        Children = new List<FabrikChain>();
+        LengthToChild = 0.0f;
+        Solver = null;
+        DistanceFromRoot = 0;
+    }
+
     public void SetUp()
     {
-        Children = new List<FabrikChain>();
+        Clear();
 
         if (this.transform.parent != null && this.transform.parent.GetComponent<FabrikChain>() != null)
         {
@@ -45,7 +52,6 @@ public class FabrikChain : MonoBehaviour
                 Solver = child.GetComponent<FabrikSolver>();
             }
         }
-        OriginLocalPos = this.transform.localPosition;
     }
 
     public Vector3 SolveIK(Vector3 targetPos)
