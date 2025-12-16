@@ -24,7 +24,6 @@ public class FabrikChain : MonoBehaviour
         Parent = null;
         Children = new List<FabrikChain>();
         LengthToChild = 0.0f;
-        Solver = null;
         DistanceFromRoot = 0;
     }
 
